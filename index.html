@@ -5,11 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | GitHub user search app</title>
   <style>
-    
-  </style
+    :root{
+      
+    }
+    body{
+      font-family: "Space Mono";
+      line-height: 25px;
+      font-size: 15px;
+      font-weight: 400;
+    }
+    h1,h2{
+      font-weight: bold;
+    }
+    h3,h4{
+      font-weight: 400;
+    }
+    h1{
+      font-size: 26px;
+      line-height: 38px;
+    }
+    h2{
+      font-size: 22px;
+      line-height: 33px;
+    }
+    h3{
+      line-height: 24px;
+      font-size: 16px;
+    }
+    h4{
+      line-height: 20px;
+      font-size: 13px;
+    }
+  
+  </style>
 </head>
 <body>
 
@@ -30,22 +63,22 @@
     </div>
     <div class="github-profile">
       <img src="" class="avatarImg" alt="avatar">
-      <h3 class="userName">The Octocat</h3>
-      <p class="userLogin">@octocat</p>
-      <p class="userJoinDate">Joined 25 Jan 2011</p>
+      <h1 class="userName">The Octocat</h1>
+      <h2 class="userLogin">@octocat</h2>
+      <h3 class="userJoinDate">Joined 25 Jan 2011</h3>
       <p class="userBio">
         lorem ipsum dolor sit amet,lorem ipsum dolor sit amet,lorem ipsum dolor sit amet,lorem ipsum dolor sit amet.
       <div class="userFollowerDiv">
         <div class="userRepos">
-          <span>Repos</span>
+          <h4>Repos</h4>
           <span>8</span>
         </div>
         <div class="userFollower">
-          <span>Follower</span>
+          <h4>Follower</h4>
           <span>3938</span>
         </div>
         <div class="userFollowing">
-          <span>Following</span>
+          <h4>Following</h4>
           <span>9</span>
         </div>
       </div>
