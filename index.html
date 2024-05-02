@@ -7,22 +7,79 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
   <title>Frontend Mentor | GitHub user search app</title>
+  <style>
+    
+  </style
 </head>
 <body>
 
-  devfinder
+  <div class="container">
+    <div class="devFinder">
+      <h1>devfinder</h1>
+      <div>
+        <p>Dark mode</p>
+        <button>
+          <img src="./assets/icon-sun.svg" alt="sun">
+        </button>
+      </div>
+    </div>
+    <div class="searchBar">
+      <img src="./assets/icon-search.svg" alt="search">
+      <input type="text" placeholder="Search for a GitHub user..." class="searchInput">
+      <button class="searchBtn">Search</button>
+    </div>
+    <div class="github-profile">
+      <img src="" class="avatarImg" alt="avatar">
+      <h3 class="userName">The Octocat</h3>
+      <p class="userLogin">@octocat</p>
+      <p class="userJoinDate">Joined 25 Jan 2011</p>
+      <p class="userBio">
+        lorem ipsum dolor sit amet,lorem ipsum dolor sit amet,lorem ipsum dolor sit amet,lorem ipsum dolor sit amet.
+      <div class="userFollowerDiv">
+        <div class="userRepos">
+          <span>Repos</span>
+          <span>8</span>
+        </div>
+        <div class="userFollower">
+          <span>Follower</span>
+          <span>3938</span>
+        </div>
+        <div class="userFollowing">
+          <span>Following</span>
+          <span>9</span>
+        </div>
+      </div>
+      <ul class="userLocationLinks">
+        <li>
+          <img src="/assets/icon-location.svg" alt="icon location">
+          <a href="">San Francisco</a>
+        </li>
+        <li>
+          <img src="/assets/icon-website.svg" alt="icon website">
+          <a href="">https://github.blog</a>
+        </li>
+        <li>
+          <img src="/assets/icon-twitter.svg" alt="icon twitter">
+          <a href="">Not Available</a>
+        </li>
+        <li>
+          <img src="/assets/icon-company.svg" alt="icon company">
+          <a href="">agithub</a>
+        </li>
+      </ul>
+      </p>
+  </div>
+  </div>
+  <script>
+    const api_octocat = "https://api.github.com/users/octocat"
+    const api_github = "https://api.github.com/users/:username"
 
-  Light
-  Dark
-
-  Search GitHub username...
-  Search
-
-  Joined
-
-  Repos
-  Followers
-  Following
-
+    getData()
+    async function getData(){
+      const response = await fetch(api_octocat);
+      const data = await response.json();
+      console.log(data);
+    }
+  </script>
 </body>
 </html>
