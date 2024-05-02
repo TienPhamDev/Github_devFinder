@@ -1,0 +1,17 @@
+{
+  "name": "github_devfinder",
+  "version": "1.0.0",
+  "description": "small app use github user api to search user on github",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "github"
+  ],
+  "author": "TienPhamDev",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}

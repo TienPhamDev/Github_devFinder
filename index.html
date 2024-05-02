@@ -8,16 +8,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/output.css">
   <title>Frontend Mentor | GitHub user search app</title>
   <style>
     :root{
-      
+      /*-- light mode colors --*/
+      --gitHubOceanBlue:#0079ff;
+      --gitHubGray:#697c9a;
+      --gitHubDarkSky:#4b6a9b;
+      --gitHubDarkSlate:#2B3442;
+
+      /*-- dark mode colors --*/
+      --gitHubWhite:#ffffff;
+      --gitHubBlack:#141d2f;
+      --gitHubRoyalBlue:#1e2a47;
     }
     body{
       font-family: "Space Mono";
       line-height: 25px;
       font-size: 15px;
       font-weight: 400;
+      background-color: var(--gitHubBlack);
     }
     h1,h2{
       font-weight: bold;
@@ -45,8 +56,7 @@
   </style>
 </head>
 <body>
-
-  <div class="container">
+  <div class="container mx-auto px-4">
     <div class="devFinder">
       <h1>devfinder</h1>
       <div>
