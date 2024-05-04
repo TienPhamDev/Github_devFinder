@@ -44,7 +44,7 @@ body{
 .searchBtn{
   padding: 0.4rem 1rem;
   background-color: var(--gitHubOceanBlue);
-  border-radius: 5px;
+  border-radius: 8px;
   transition: 0.3s;
 }
 .searchBtn:hover,.searchBtn:active,.searchBtn:focus{
@@ -60,7 +60,7 @@ body{
 /*-- search bar --*/
 .searchBar{
   background-color: var(--gitHubRoyalBlue);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .searchInput{
   background-color: var(--gitHubRoyalBlue);
@@ -73,9 +73,38 @@ body{
   padding: 42px 24px;
 
 }
-
 .avatarImg{
   height: 72px;
   width: 72px;
   border-radius: 50%;
+}
+.userLogin{
+  color: var(--gitHubOceanBlue);
+}
+.userFollowerDiv{
+  background-color: var(--gitHubBlack);
+  padding: 16px 16px;
+  border-radius: 10px;
+}
+.userFollowerDiv div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.userLocationLinks li{
+  display: flex; 
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.userLocationLinks li a:hover{
+  text-decoration: underline;
+}
+.userLocationLinks li svg{
+  width: 24px;
+  height: 24px;
 }
