@@ -8,94 +8,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css">
   <link rel="stylesheet" href="./src/output.css">
+  
   <title>Frontend Mentor | GitHub user search app</title>
   <style>
-    :root{
-      /*-- light mode colors --*/
-      --gitHubOceanBlue:#0079ff;
-      --gitHubGray:#697c9a;
-      --gitHubDarkSky:#4b6a9b;
-      --gitHubDarkSlate:#2B3442;
-      --gitHubLightBlue:#60abff;
-      /*-- dark mode colors --*/
-      --gitHubWhite:#ffffff;
-      --gitHubBlack:#141d2f;
-      --gitHubRoyalBlue:#1e2a47;
-    }
-    body{
-      color:var(--gitHubWhite);
-      font-family: "Space Mono";
-      line-height: 25px;
-      font-size: 15px;
-      font-weight: 400;
-      background-color: var(--gitHubBlack);
-    }
-    h1,h2{
-      font-weight: bold;
-    }
-    h3,h4{
-      font-weight: 400;
-    }
-    h1{
-      font-size: 26px;
-      line-height: 38px;
-    }
-    h2{
-      font-size: 22px;
-      line-height: 33px;
-    }
-    h3{
-      line-height: 24px;
-      font-size: 16px;
-    }
-    h4{
-      line-height: 20px;
-      font-size: 13px;
-    }
-    /*-- search button --*/
-    .searchBtn{
-      padding: 0.4rem 1rem;
-      background-color: var(--gitHubOceanBlue);
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-    .searchBtn:hover,.searchBtn:active,.searchBtn:focus{
-      background-color: var(--gitHubLightBlue);
-    }
-    /*-- dark and light mode button --*/
-    .modeToggle{
-      transition: 0.3s;
-    }
-    .modeToggle:hover,.modeToggle button svg:hover{
-      color: var(--gitHubDarkSky);
-    }
-    /*-- search bar --*/
-    .searchBar{
-      background-color: var(--gitHubRoyalBlue);
-      border-radius: 5px;
-    }
-    .searchInput{
-      background-color: var(--gitHubRoyalBlue);
-      outline: none;
-    }
-    /*-- github profile --*/
-    .github-profile{
-      background-color: var(--gitHubRoyalBlue);
-      border-radius: 10px;
-      padding: 42px 24px;
-    }
-    .avatarImg{
-      height: 72px;
-      width: 72px;
-      border-radius: 50%;
-    }
+
   </style>
 </head>
 <body>
   <div class="container mx-auto px-4">
     <div class="devFinder flex justify-between items-center my-8">
-      <h1>devfinder</h1>
+      <h1 class="h1">devfinder</h1>
       
       <button class="modeToggle flex gap-2 items-center">
         <span>LIGHT</span>
@@ -108,29 +32,29 @@
       <input class="searchInput grow" type="text" placeholder="Search for a GitHub user...">
       <button class="searchBtn">Search</button>
     </div>
-    <div class="github-profile grid">
-      <img src="" class="avatarImg" alt="avatar">
-      <h1 class="userName">The Octocat</h1>
-      <h2 class="userLogin">@octocat</h2>
-      <h3 class="userJoinDate">Joined 25 Jan 2011</h3>
-      <p class="userBio">
+    <div class="github-profile grid grid-cols-[0.5fr,1fr]">
+      <img src="" class="avatarImg row-span-3" alt="avatar">
+      <h1 class="userName h1">The Octocat</h1>
+      <h2 class="userLogin h2">@octocat</h2>
+      <h3 class="userJoinDate h3">Joined 25 Jan 2011</h3>
+      <p class="userBio col-start-1 col-span-2 row-start-4">
         lorem ipsum dolor sit amet,lorem ipsum dolor sit amet,lorem ipsum dolor sit amet,lorem ipsum dolor sit amet.
       </p>
-      <div class="userFollowerDiv">
+      <div class="userFollowerDiv col-span-2 col-start-1 row-start-5">
         <div class="userRepos">
-          <h4>Repos</h4>
+          <h4 class="h4">Repos</h4>
           <span>8</span>
         </div>
         <div class="userFollower">
-          <h4>Follower</h4>
+          <h4 class="h4">Follower</h4>
           <span>3938</span>
         </div>
         <div class="userFollowing">
-          <h4>Following</h4>
+          <h4 class="h4">Following</h4>
           <span>9</span>
         </div>
       </div>
-      <ul class="userLocationLinks">
+      <ul class="userLocationLinks row-start-6 col-span-2">
         <li>
           <img src="/assets/icon-location.svg" alt="icon location">
           <a href="">San Francisco</a>
@@ -154,7 +78,7 @@
     const api_octocat = "https://api.github.com/users/octocat"
     const api_github = "https://api.github.com/users/:username"
 
-    getData()
+    
     async function getData(){
       const githubProfile = document.querySelector(".github-profile")
       const response = await fetch(api_octocat);
