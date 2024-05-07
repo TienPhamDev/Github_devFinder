@@ -17,7 +17,7 @@
   </style>
 </head>
 <body>
-  <div class="container mx-auto px-4 w-3/4 lg:w-1/2">
+  <div class="container mx-auto px-4 md:w-3/4 xl:w-1/2">
     <div class="devFinder flex justify-between items-center my-8">
       <h1 class="h1">devfinder</h1>
       
@@ -32,7 +32,7 @@
       <input class="searchInput grow" type="text" placeholder="Search for a GitHub user...">
       <button class="searchBtn">Search</button>
     </div>
-    <div class="github-profile grid items-center grid-cols-[0.5fr,1fr] md:grid-cols-[0.7fr,1fr,1fr]">
+    <div class="github-profile grid items-center grid-cols-[0.5fr,1fr] lg:grid-cols-[0.7fr,1fr,1fr]">
       <img src="" class="avatarImg row-span-3" alt="avatar">
       <h1 class="userName h1">The Octocat</h1>
       <h3 class="userLogin h3 md:col-start-2">@octocat</h3>
@@ -79,11 +79,12 @@
     const api_octocat = "https://api.github.com/users/octocat"
     const api_github = "https://api.github.com/users/:username"
 
-    
+    getData()
     async function getData(){
       const githubProfile = document.querySelector(".github-profile")
       const response = await fetch(api_octocat);
       const data = await response.json();
+      console.log(data)
       githubProfile.innerHTML =`
       <img src="" class="avatarImg row-span-3" alt="avatar">
       <h1 class="userName h1">The Octocat</h1>
