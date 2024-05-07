@@ -33,7 +33,7 @@
       <button class="searchBtn">Search</button>
     </div>
     <div class="github-profile grid items-center grid-cols-[0.5fr,1fr] lg:grid-cols-[0.7fr,1fr,1fr]">
-      <img src="" class="avatarImg row-span-3" alt="avatar">
+      <img src="" class="avatarImg row-span-3 flex justify-center items-center" alt="avatar">
       <h1 class="userName h1">The Octocat</h1>
       <h3 class="userLogin h3 md:col-start-2">@octocat</h3>
       <h3 class="userJoinDate h3 md:row-start-1 md:col-start-3">Joined 25 Jan 2011</h3>
@@ -86,10 +86,10 @@
       const data = await response.json();
       console.log(data)
       githubProfile.innerHTML =`
-      <img src="" class="avatarImg row-span-3" alt="avatar">
-      <h1 class="userName h1">The Octocat</h1>
-      <h3 class="userLogin h3 md:col-start-2">@octocat</h3>
-      <h3 class="userJoinDate h3 md:row-start-1 md:col-start-3">Joined 25 Jan 2011</h3>
+      <img src="${data.avatar_url}" class="avatarImg row-span-3 justify-self-center" alt="avatar">
+      <h1 class="userName h1 ">${data.name}</h1>
+      <h3 class="userLogin h3 md:col-start-2">@${data.login}</h3>
+      <h3 class="userJoinDate h3 md:row-start-1 md:col-start-3">Joined ${new Date(data.create_at)}</h3>
       <p class="userBio col-start-1 col-span-2 row-start-4 my-4 md:col-start-2">
         lorem ipsum dolor sit amet,lorem ipsum dolor sit amet,lorem ipsum dolor sit amet,lorem ipsum dolor sit amet.
       </p>
