@@ -85,13 +85,14 @@
       const response = await fetch(api_octocat);
       const data = await response.json();
       console.log(data)
+      console.log(new Date(data.created_at).toLocaleDateString("en-US",{dateStyle:"medium"}))
       githubProfile.innerHTML =`
       <img src="${data.avatar_url}" class="avatarImg row-span-3 justify-self-center" alt="avatar">
       <h1 class="userName h1 ">${data.name}</h1>
       <h3 class="userLogin h3 md:col-start-2">@${data.login}</h3>
-      <h3 class="userJoinDate h3 md:row-start-1 md:col-start-3">Joined ${new Date(data.create_at)}</h3>
+      <h3 class="userJoinDate h3 md:row-start-1 md:col-start-3">Joined ${new Date(data.created_at).toLocaleDateString("en-US",{dateStyle:"medium"})}</h3>
       <p class="userBio col-start-1 col-span-2 row-start-4 my-4 md:col-start-2">
-        lorem ipsum dolor sit amet,lorem ipsum dolor sit amet,lorem ipsum dolor sit amet,lorem ipsum dolor sit amet.
+        ${data.bio}
       </p>
       <div class="userFollowerDiv col-span-2 col-start-1 row-start-5 flex justify-evenly items-center gap-6 my-4 md:col-start-2">
         <div class="userRepos">
