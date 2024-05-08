@@ -76,8 +76,9 @@
   </div>
   </div>
   <script>
-    const api_octocat = "https://api.github.com/users/octocat"
-    const api_github = "https://api.github.com/users/:username"
+
+    const searchInput = document.querySelector(".searchInput")
+    const searchBtn = document.querySelector(".searchBtn")
     function dataBioIsNull(e){
       if(e === null){
         return `This profile has no bio`
@@ -99,10 +100,16 @@
         return e
       }
     }
-    getData()
-    async function getData(){
+    function inputUserName(){
+      
+      const api_octocat = "https://api.github.com/users/octocat"
+       
+      let api_github = `https://api.github.com/users/${searchInput.value}`
+      getData(api_github)
+    }
+    async function getData(api){
       const githubProfile = document.querySelector(".github-profile")
-      const response = await fetch(api_octocat);
+      const response = await fetch(api);
       const data = await response.json();
       console.log(data)
       console.log(new Date(data.created_at).toLocaleDateString("en-US",{dateStyle:"medium"}))
@@ -148,6 +155,7 @@
         </li>
       </ul>`
     }
+    searchBtn.addEventListener("click",inputUserName)
   </script>
 </body>
 </html>
