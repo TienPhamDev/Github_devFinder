@@ -102,10 +102,14 @@
     }
     function inputUserName(){
       
-      const api_octocat = "https://api.github.com/users/octocat"
+      
        
       let api_github = `https://api.github.com/users/${searchInput.value}`
       getData(api_github)
+    }
+    function firstLoadPage(){
+      const api_octocat = "https://api.github.com/users/octocat"
+      getData(api_octocat)
     }
     async function getData(api){
       const githubProfile = document.querySelector(".github-profile")
@@ -155,6 +159,7 @@
         </li>
       </ul>`
     }
+    window.addEventListener("load",firstLoadPage)
     searchBtn.addEventListener("click",inputUserName)
   </script>
 </body>
