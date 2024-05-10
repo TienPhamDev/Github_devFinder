@@ -857,10 +857,6 @@ video {
   display: none;
 }
 
-.w-3\/4 {
-  width: 75%;
-}
-
 .w-\[this-is\\\\\] {
   width: this-is\\;
 }
@@ -871,6 +867,10 @@ video {
 
 .w-\[weird-and-invalid\] {
   width: weird-and-invalid;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .flex-shrink {
@@ -1397,6 +1397,10 @@ video {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-6 {
@@ -2561,10 +2565,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:w-1\/2 {
-    width: 50%;
-  }
-
   .lg\:grid-cols-\[0\.7fr\2c 1fr\2c 1fr\] {
     grid-template-columns: 0.7fr 1fr 1fr;
   }
