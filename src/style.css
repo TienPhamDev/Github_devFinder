@@ -108,6 +108,9 @@ body{
   padding: 16px 16px;
   border-radius: 10px;
 }
+.userRepos span,.userFollower span,.userFollowing span{
+  font-weight: bold;
+}
 .userFollowerDiv div{
   display: flex;
   flex-direction: column;

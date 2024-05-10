@@ -78,23 +78,9 @@
       </ul>
   </div>
   </div>
-  <script src="script.js">
+  <script src="/scripts/script.js">
   </script>
-  <script>
-    const modeToggle = document.querySelector(".modeToggle")
-    const light = document.querySelector(".light")
-    const dark = document.querySelector(".dark")
-    const svgMoon = document.querySelector(".svgMoon")
-    const svgSun = document.querySelector(".svgSun")
-    const body = document.querySelector(".body")
-    modeToggle.addEventListener("click", (e)=>{
-      light.classList.toggle("hidden")
-      dark.classList.toggle("hidden")
-      svgMoon.classList.toggle("hidden")
-      svgSun.classList.toggle("hidden")
-      body.classList.toggle("light-mode")
-      
-    })
+  <script src="/scripts/changeMode.js">
   </script>
 </body>
 </html>
