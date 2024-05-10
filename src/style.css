@@ -2,21 +2,29 @@
   /*-- light mode colors --*/
   --gitHubOceanBlue:#0079ff;
   --gitHubGray:#697c9a;
-  --gitHubDarkSky:#4b6a9b;
-  --gitHubDarkSlate:#2B3442;
+
+
   --gitHubLightBlue:#60abff;
+
   /*-- dark mode colors --*/
-  --gitHubWhite:#ffffff;
-  --gitHubBlack:#141d2f;
-  --gitHubRoyalBlue:#1e2a47;
+  --gitHubText:#ffffff;
+  --gitHubBG:#141d2f;
+  --gitHubElementColor:#1e2a47;
+}
+.light-mode{
+  --gitHubOceanBlue:#0079ff;
+  --gitHubLightBlue:#60abff;
+  --gitHubText:#4b6a9b;
+  --gitHubElementColor:#FEFEFE;
+  --gitHubBG:#f6f8ff;
 }
 body{
-  color:var(--gitHubWhite);
+  color:var(--gitHubText);
   font-family: "Space Mono";
   line-height: 25px;
   font-size: 15px;
   font-weight: 400;
-  background-color: var(--gitHubBlack);
+  background-color: var(--gitHubBG);
 }
 .h1,.h2{
   font-weight: bold;
@@ -25,6 +33,7 @@ body{
   font-weight: 400;
 }
 .h1{
+  
   font-size: 26px;
   line-height: 38px;
 }
@@ -42,33 +51,46 @@ body{
 }
 /*-- search button --*/
 .searchBtn{
+  color: #ffffff;
   padding: 0.4rem 1rem;
   background-color: var(--gitHubOceanBlue);
   border-radius: 8px;
   transition: 0.3s;
 }
-.searchBtn:hover,.searchBtn:active,.searchBtn:focus{
+/* .searchBtn:active,.searchBtn:focus */
+
+.searchBtn:hover{
   background-color: var(--gitHubLightBlue);
 }
+
 /*-- dark and light mode button --*/
 .modeToggle{
   transition: 0.3s;
 }
 .modeToggle:hover,.modeToggle button svg:hover{
-  color: var(--gitHubDarkSky);
+  color: var(--gitHubText);
 }
 /*-- search bar --*/
 .searchBar{
-  background-color: var(--gitHubRoyalBlue);
+  background-color: var(--gitHubElementColor);
   border-radius: 10px;
 }
 .searchInput{
-  background-color: var(--gitHubRoyalBlue);
+  background-color: var(--gitHubElementColor);
   outline: none;
+}
+/*-- search bar --*/
+.searchInput{
+  width: 15%;
+} 
+
+/* no results */
+.noResults{
+  color: red;
 }
 /*-- github profile --*/
 .github-profile{
-  background-color: var(--gitHubRoyalBlue);
+  background-color: var(--gitHubElementColor);
   border-radius: 10px;
   padding: 42px 24px;
 
@@ -82,9 +104,12 @@ body{
   color: var(--gitHubOceanBlue);
 }
 .userFollowerDiv{
-  background-color: var(--gitHubBlack);
+  background-color: var(--gitHubBG);
   padding: 16px 16px;
   border-radius: 10px;
+}
+.userRepos span,.userFollower span,.userFollowing span{
+  font-weight: bold;
 }
 .userFollowerDiv div{
   display: flex;
